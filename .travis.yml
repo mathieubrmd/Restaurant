@@ -4,8 +4,8 @@ php:
 before_script:
   ## Composer
   - curl -s http://getcomposer.org/installer | php
-  - composer update doctrine/mongodb-odm-bundle
-  - composer install
+  - php composer.phar install
+  - php composer.phar update doctrine/mongodb-odm-bundle
   ## PHP CodeSniffer
   - pyrus install pear/PHP_CodeSniffer
   - phpenv rehash
