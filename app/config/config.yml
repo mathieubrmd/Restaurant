@@ -44,10 +44,19 @@ doctrine_mongodb:
         default:
             server: "%mongodb_server%"
             options: {}
-    default_database: test_database
+    default_database: restaurant
     document_managers:
         default:
             auto_mapping: true
+
+# FOSUser Configuration
+fos_user:
+    db_driver: mongodb # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: AppBundle\Document\User
+    from_email:
+        address: "%mailer_user%"
+        sender_name: "%mailer_user%"
 
 # Swiftmailer Configuration
 swiftmailer:
