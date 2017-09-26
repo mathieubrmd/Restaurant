@@ -4,7 +4,7 @@ php:
 before_script:
   ## Composer
   - curl -s http://getcomposer.org/installer | php
-  - php composer.phar install
+  - composer install
   ## PHP CodeSniffer
   - pyrus install pear/PHP_CodeSniffer
   - phpenv rehash
